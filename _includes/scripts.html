@@ -1,0 +1,79 @@
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/calendar.js"></script>
+<script src="https://kit.fontawesome.com/7de2b3ea15.js" crossorigin="anonymous"></script>
+
+<!-- 애니메이션-->
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
+<!-- 네이버 지도-->
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=k7tdyjix5l"></script>
+<script>
+
+  var latlng = new naver.maps.LatLng(37.454892, 126.629112);
+  var map = new naver.maps.Map('map', {
+    scaleControl: true,
+    logoControl: true,
+    mapDataControl: true,
+    zoom: 17,
+    zoomControl: true,
+    zoomControlOptions: {
+      style: naver.maps.ZoomControlStyle.SMALL,
+      position: naver.maps.Position.TOP_RIGHT
+    },
+    center: latlng,
+  });
+
+  var marker = new naver.maps.Marker({
+    position: latlng,
+    map: map
+  });
+
+  var locationBtnHtml = '<div class="btn-location"><a href="{{ site.location }}" target="_blank"><i class="fas fa-expand"></i>&nbsp;&nbsp;크게 보기</a></div>';
+  naver.maps.Event.once(map, 'init_stylemap', function () {
+    //customControl 객체 이용하기
+    var customControl = new naver.maps.CustomControl(locationBtnHtml, {
+      position: naver.maps.Position.TOP_LEFT
+    });
+
+    customControl.setMap(map);
+  });
+</script>
+
+<!-- 카카오 링크-->
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script>
+  Kakao.init('f3e8a366c3e790c30825d938b66ec2aa');
+
+  //<![CDATA[
+  // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+  // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+  Kakao.Link.createCustomButton({
+    container: '#kakao-link-btn',
+    templateId: 22208
+  });
+  //]]>
+</script>
+
+<!-- 이미지 뷰어 -->
+<script src="js/viewer.min.js"></script>
+<script>
+  const viewer = new Viewer(document.getElementById('gallery'), {
+    navbar: true,
+    toolbar: {
+      prev: true,
+      next: true,
+    },
+    fullscreen: true,
+    zoomable: false,
+    movable: false,
+    title: '',
+    url(image) {
+      return image.src.replace('thumbs', 'original');
+    }
+  });
+</script>

@@ -1,0 +1,29 @@
+
+
+.calendar-container h2{
+	color: #c7bebe;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.week-days .col,
+.event-calendar .col{
+	line-height: 1.0;
+	text-align: center;
+	padding: 2vw;
+	width: 14.285714285714285714285714285714%!important;
+	*width: 14.285714285714285714285714285714%!important;
+}
+.wedding-day{
+	border-radius: 15px;
+	background: #f5a1a3!important;
+	color: #fefefe!important;
+}
+
+.day-0{
+	color: #f5a1a3;
+}
+
+.day-6{
+	color: #a1a3f5;
+}

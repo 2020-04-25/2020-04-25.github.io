@@ -1,0 +1,44 @@
+.delay-100ms {
+    animation-duration: 1s;
+    animation-delay: 0.1s;
+}
+
+.delay-200ms {
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+}
+
+.delay-300ms {
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+}
+
+.delay-400ms {
+    animation-duration: 1s;
+    animation-delay: 0.4s;
+}
+
+.delay-500ms {
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+.delay-600ms {
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+}
+
+.delay-700ms {
+    animation-duration: 1s;
+    animation-delay: 0.7s;
+}
+
+.delay-800ms {
+    animation-duration: 1s;
+    animation-delay: 0.8s;
+}
+
+.delay-900ms {
+    animation-duration: 1s;
+    animation-delay: 0.9s;
+}
